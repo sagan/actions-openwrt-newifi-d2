@@ -17,3 +17,6 @@
 
 测试 fuse 可用（rclone mount)。
 
+未集成，单独安装ipk：
+
+* [kms](https://github.com/cokebar/openwrt-vlmcsd/)
