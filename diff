@@ -1,0 +1,1980 @@
+99a100
+101a103
+120c122,123
+< CONFIG_DEFAULT_dnsmasq=y
+---
+> CONFIG_DEFAULT_default-settings=y
+> CONFIG_DEFAULT_dnsmasq-full=y
+136a140,157
+> CONFIG_DEFAULT_luci=y
+> CONFIG_DEFAULT_luci-app-control-timewol=y
+> CONFIG_DEFAULT_luci-app-control-webrestriction=y
+> CONFIG_DEFAULT_luci-app-control-weburl=y
+> CONFIG_DEFAULT_luci-app-ddns=y
+> CONFIG_DEFAULT_luci-app-fileassistant=y
+> CONFIG_DEFAULT_luci-app-flowoffload=y
+> CONFIG_DEFAULT_luci-app-passwall=y
+> CONFIG_DEFAULT_luci-app-pppoe-relay=y
+> CONFIG_DEFAULT_luci-app-pppoe-server=y
+> CONFIG_DEFAULT_luci-app-pptp-vpnserver-manyusers=y
+> CONFIG_DEFAULT_luci-app-ramfree=y
+> CONFIG_DEFAULT_luci-app-timecontrol=y
+> CONFIG_DEFAULT_luci-app-vlmcsd=y
+> CONFIG_DEFAULT_luci-app-wol=y
+> CONFIG_DEFAULT_luci-compat=y
+> CONFIG_DEFAULT_luci-theme-bootstrap-mod=y
+> CONFIG_DEFAULT_luci-theme-darkmatter=y
+148a170
+> CONFIG_DEFAULT_wget=y
+200,201c222,223
+< CONFIG_ALL_NONSHARED=y
+< CONFIG_ALL_KMODS=y
+---
+203c225
+< CONFIG_BUILDBOT=y
+---
+222,223c244,245
+< CONFIG_KERNEL_BUILD_USER="builder"
+< CONFIG_KERNEL_BUILD_DOMAIN="buildhost"
+---
+> CONFIG_KERNEL_BUILD_USER=""
+> CONFIG_KERNEL_BUILD_DOMAIN=""
+228c250
+---
+> CONFIG_KERNEL_MIPS_FPU_EMULATOR=y
+232c254
+---
+> CONFIG_KERNEL_KALLSYMS=y
+335c357
+< CONFIG_DEVEL=y
+---
+341c363
+< CONFIG_AUTOREMOVE=y
+---
+347,348d368
+350d369
+354,356d372
+< CONFIG_NEED_TOOLCHAIN=y
+373,375c389,390
+< CONFIG_IB=y
+< CONFIG_SDK=y
+---
+377c392
+< CONFIG_IMAGEOPT=y
+---
+393,406c408
+< CONFIG_VERSIONOPT=y
+< CONFIG_VERSION_DIST="OpenWrt"
+< CONFIG_VERSION_NUMBER=""
+< CONFIG_VERSION_CODE=""
+< CONFIG_VERSION_REPO="http://downloads.openwrt.org/releases/19.07.3"
+< CONFIG_VERSION_HOME_URL=""
+< CONFIG_VERSION_MANUFACTURER=""
+< CONFIG_VERSION_MANUFACTURER_URL=""
+< CONFIG_VERSION_BUG_URL=""
+< CONFIG_VERSION_SUPPORT_URL=""
+< CONFIG_VERSION_PRODUCT=""
+< CONFIG_VERSION_HWREV=""
+< CONFIG_VERSION_FILENAMES=y
+< CONFIG_VERSION_CODE_FILENAMES=y
+---
+409d410
+< CONFIG_FEED_luci=y
+411a413,414
+> CONFIG_FEED_luci=y
+> CONFIG_FEED_lienol=y
+1462c1465
+< CONFIG_PACKAGE_dnsmasq=m
+---
+1492c1495
+< CONFIG_PACKAGE_libatomic=m
+---
+> CONFIG_PACKAGE_libatomic=y
+1495c1498
+< CONFIG_PACKAGE_libgomp=m
+---
+1498c1501
+< CONFIG_PACKAGE_libstdcpp=m
+---
+> CONFIG_PACKAGE_libstdcpp=y
+1515c1518
+---
+> CONFIG_PACKAGE_resolveip=y
+1517,1518c1520,1521
+< CONFIG_PACKAGE_rpcd-mod-file=y
+< CONFIG_PACKAGE_rpcd-mod-iwinfo=y
+---
+1520c1523
+< CONFIG_PACKAGE_snapshot-tool=m
+---
+1541c1544
+---
+1549c1552
+---
+1574d1576
+1584,1593d1585
+< 
+1601a1594,1599
+> CONFIG_PACKAGE_kmod-oaf=y
+> 
+1609d1606
+1624a1622
+1629d1626
+1636a1634,1636
+> CONFIG_PACKAGE_automount=y
+> CONFIG_PACKAGE_ipv6helper=y
+1637a1638
+1651c1652
+< CONFIG_PACKAGE_ar3k-firmware=m
+---
+1672,1676c1673,1675
+< CONFIG_PACKAGE_ath9k-htc-firmware=m
+< CONFIG_PACKAGE_b43legacy-firmware=m
+< CONFIG_B43LEGACY_FW_SQUASH=y
+< CONFIG_B43LEGACY_FW_SQUASH_COREREVS="1,2,3,4"
+< CONFIG_PACKAGE_bnx2-firmware=m
+---
+1685c1684
+< CONFIG_PACKAGE_brcmfmac-firmware-usb=m
+---
+1687,1689c1686,1688
+< CONFIG_PACKAGE_carl9170-firmware=m
+< CONFIG_PACKAGE_e100-firmware=m
+< CONFIG_PACKAGE_edgeport-firmware=m
+---
+1691,1692c1690,1691
+< CONFIG_PACKAGE_iwl3945-firmware=m
+< CONFIG_PACKAGE_iwl4965-firmware=m
+---
+1714,1722c1713,1721
+< CONFIG_PACKAGE_jboot-tools=m
+< CONFIG_PACKAGE_libertas-sdio-firmware=m
+< CONFIG_PACKAGE_libertas-spi-firmware=m
+< CONFIG_PACKAGE_libertas-usb-firmware=m
+< CONFIG_PACKAGE_mt7601u-firmware=m
+< CONFIG_PACKAGE_mwifiex-pcie-firmware=m
+< CONFIG_PACKAGE_mwifiex-sdio-firmware=m
+< CONFIG_PACKAGE_mwl8k-firmware=m
+< CONFIG_PACKAGE_p54-pci-firmware=m
+---
+1724,1726c1723,1725
+< CONFIG_PACKAGE_p54-usb-firmware=m
+< CONFIG_PACKAGE_prism54-firmware=m
+< CONFIG_PACKAGE_r8169-firmware=m
+---
+1728,1732c1727,1731
+< CONFIG_PACKAGE_rs9113-firmware=m
+< CONFIG_PACKAGE_rt2800-pci-firmware=m
+< CONFIG_PACKAGE_rt2800-usb-firmware=m
+< CONFIG_PACKAGE_rt61-pci-firmware=m
+< CONFIG_PACKAGE_rt73-usb-firmware=m
+---
+1734,1736c1733,1735
+< CONFIG_PACKAGE_rtl8192ce-firmware=m
+< CONFIG_PACKAGE_rtl8192cu-firmware=m
+< CONFIG_PACKAGE_rtl8192de-firmware=m
+---
+1738,1739c1737,1738
+< CONFIG_PACKAGE_rtl8192se-firmware=m
+< CONFIG_PACKAGE_rtl8192su-firmware=m
+---
+1742c1741
+< CONFIG_PACKAGE_rtl8821ae-firmware=m
+---
+1746,1747c1745,1746
+< CONFIG_PACKAGE_wl12xx-firmware=m
+< CONFIG_PACKAGE_wl18xx-firmware=m
+---
+1786,1812c1785,1796
+< CONFIG_PACKAGE_kmod-aoe=m
+< CONFIG_PACKAGE_kmod-ata-core=m
+< CONFIG_PACKAGE_kmod-ata-ahci=m
+< CONFIG_PACKAGE_kmod-ata-artop=m
+< CONFIG_PACKAGE_kmod-ata-marvell-sata=m
+< CONFIG_PACKAGE_kmod-ata-nvidia-sata=m
+< CONFIG_PACKAGE_kmod-ata-pdc202xx-old=m
+< CONFIG_PACKAGE_kmod-ata-piix=m
+< CONFIG_PACKAGE_kmod-ata-sil=m
+< CONFIG_PACKAGE_kmod-ata-sil24=m
+< CONFIG_PACKAGE_kmod-ata-via-sata=m
+< CONFIG_PACKAGE_kmod-block2mtd=m
+< CONFIG_PACKAGE_kmod-dax=m
+< CONFIG_PACKAGE_kmod-dm=m
+< CONFIG_PACKAGE_kmod-loop=m
+< CONFIG_PACKAGE_kmod-md-mod=m
+< CONFIG_PACKAGE_kmod-md-linear=m
+< CONFIG_PACKAGE_kmod-md-multipath=m
+< CONFIG_PACKAGE_kmod-md-raid0=m
+< CONFIG_PACKAGE_kmod-md-raid1=m
+< CONFIG_PACKAGE_kmod-md-raid10=m
+< CONFIG_PACKAGE_kmod-md-raid456=m
+< CONFIG_PACKAGE_kmod-nbd=m
+< CONFIG_PACKAGE_kmod-scsi-cdrom=m
+< CONFIG_PACKAGE_kmod-scsi-core=m
+< CONFIG_PACKAGE_kmod-scsi-generic=m
+< CONFIG_PACKAGE_kmod-scsi-tape=m
+---
+> CONFIG_PACKAGE_kmod-scsi-core=y
+1817,1830c1801
+< CONFIG_PACKAGE_kmod-can=m
+< CONFIG_PACKAGE_kmod-can-bcm=m
+< CONFIG_PACKAGE_kmod-can-c-can=m
+< CONFIG_PACKAGE_kmod-can-c-can-pci=m
+< CONFIG_PACKAGE_kmod-can-c-can-platform=m
+< CONFIG_PACKAGE_kmod-can-gw=m
+< CONFIG_PACKAGE_kmod-can-raw=m
+< CONFIG_PACKAGE_kmod-can-slcan=m
+< CONFIG_PACKAGE_kmod-can-usb-8dev=m
+< CONFIG_PACKAGE_kmod-can-usb-ems=m
+< CONFIG_PACKAGE_kmod-can-usb-esd=m
+< CONFIG_PACKAGE_kmod-can-usb-kvaser=m
+< CONFIG_PACKAGE_kmod-can-usb-peak=m
+< CONFIG_PACKAGE_kmod-can-vcan=m
+---
+1835,1883c1806,1849
+< CONFIG_PACKAGE_kmod-crypto-acompress=m
+< CONFIG_PACKAGE_kmod-crypto-aead=m
+< CONFIG_PACKAGE_kmod-crypto-authenc=m
+< CONFIG_PACKAGE_kmod-crypto-cbc=m
+< CONFIG_PACKAGE_kmod-crypto-ccm=m
+< CONFIG_PACKAGE_kmod-crypto-cmac=m
+< CONFIG_PACKAGE_kmod-crypto-crc32=m
+< CONFIG_PACKAGE_kmod-crypto-crc32c=m
+< CONFIG_PACKAGE_kmod-crypto-ctr=m
+< CONFIG_PACKAGE_kmod-crypto-cts=m
+< CONFIG_PACKAGE_kmod-crypto-deflate=m
+< CONFIG_PACKAGE_kmod-crypto-des=m
+< CONFIG_PACKAGE_kmod-crypto-ecb=m
+< CONFIG_PACKAGE_kmod-crypto-ecdh=m
+< CONFIG_PACKAGE_kmod-crypto-echainiv=m
+< CONFIG_PACKAGE_kmod-crypto-fcrypt=m
+< CONFIG_PACKAGE_kmod-crypto-gcm=m
+< CONFIG_PACKAGE_kmod-crypto-gf128=m
+< CONFIG_PACKAGE_kmod-crypto-ghash=m
+< CONFIG_PACKAGE_kmod-crypto-hash=m
+< CONFIG_PACKAGE_kmod-crypto-hmac=m
+< CONFIG_PACKAGE_kmod-crypto-hw-ccp=m
+< CONFIG_PACKAGE_kmod-crypto-hw-geode=m
+< CONFIG_PACKAGE_kmod-crypto-hw-hifn-795x=m
+< CONFIG_PACKAGE_kmod-crypto-hw-padlock=m
+< CONFIG_PACKAGE_kmod-crypto-hw-talitos=m
+< CONFIG_PACKAGE_kmod-crypto-iv=m
+< CONFIG_PACKAGE_kmod-crypto-kpp=m
+< CONFIG_PACKAGE_kmod-crypto-manager=m
+< CONFIG_PACKAGE_kmod-crypto-md4=m
+< CONFIG_PACKAGE_kmod-crypto-md5=m
+< CONFIG_PACKAGE_kmod-crypto-michael-mic=m
+< CONFIG_PACKAGE_kmod-crypto-misc=m
+< CONFIG_PACKAGE_kmod-crypto-null=m
+< CONFIG_PACKAGE_kmod-crypto-pcbc=m
+< CONFIG_PACKAGE_kmod-crypto-pcompress=m
+< CONFIG_PACKAGE_kmod-crypto-rmd160=m
+< CONFIG_PACKAGE_kmod-crypto-rng=m
+< CONFIG_PACKAGE_kmod-crypto-rsa=m
+< CONFIG_PACKAGE_kmod-crypto-seqiv=m
+< CONFIG_PACKAGE_kmod-crypto-sha1=m
+< CONFIG_PACKAGE_kmod-crypto-sha256=m
+< CONFIG_PACKAGE_kmod-crypto-sha512=m
+< CONFIG_PACKAGE_kmod-crypto-test=m
+< CONFIG_PACKAGE_kmod-crypto-user=m
+< CONFIG_PACKAGE_kmod-crypto-wq=m
+< CONFIG_PACKAGE_kmod-crypto-xcbc=m
+< CONFIG_PACKAGE_kmod-crypto-xts=m
+< CONFIG_PACKAGE_kmod-cryptodev=m
+---
+> CONFIG_PACKAGE_kmod-crypto-aead=y
+> CONFIG_PACKAGE_kmod-crypto-cbc=y
+> CONFIG_PACKAGE_kmod-crypto-crc32c=y
+> CONFIG_PACKAGE_kmod-crypto-cts=y
+> CONFIG_PACKAGE_kmod-crypto-des=y
+> CONFIG_PACKAGE_kmod-crypto-ecb=y
+> CONFIG_PACKAGE_kmod-crypto-hash=y
+> CONFIG_PACKAGE_kmod-crypto-hmac=y
+> CONFIG_PACKAGE_kmod-crypto-manager=y
+> CONFIG_PACKAGE_kmod-crypto-md4=y
+> CONFIG_PACKAGE_kmod-crypto-md5=y
+> CONFIG_PACKAGE_kmod-crypto-null=y
+> CONFIG_PACKAGE_kmod-crypto-pcompress=y
+> CONFIG_PACKAGE_kmod-crypto-sha1=y
+> CONFIG_PACKAGE_kmod-crypto-sha256=y
+1889d1854
+< CONFIG_PACKAGE_kmod-fs-antfs=m
+1891,1919c1856,1883
+< CONFIG_PACKAGE_kmod-fs-btrfs=m
+< CONFIG_PACKAGE_kmod-fs-cifs=m
+< CONFIG_PACKAGE_kmod-fs-configfs=m
+< CONFIG_PACKAGE_kmod-fs-cramfs=m
+< CONFIG_PACKAGE_kmod-fs-exfat0=m
+< CONFIG_PACKAGE_kmod-fs-exportfs=m
+< CONFIG_PACKAGE_kmod-fs-ext4=m
+< CONFIG_PACKAGE_kmod-fs-f2fs=m
+< CONFIG_PACKAGE_kmod-fs-fscache=m
+< CONFIG_PACKAGE_kmod-fs-hfs=m
+< CONFIG_PACKAGE_kmod-fs-hfsplus=m
+< CONFIG_PACKAGE_kmod-fs-isofs=m
+< CONFIG_PACKAGE_kmod-fs-jfs=m
+< CONFIG_PACKAGE_kmod-fs-ksmbd=m
+< CONFIG_KSMBD_SMB_INSECURE_SERVER=y
+< CONFIG_PACKAGE_kmod-fs-minix=m
+< CONFIG_PACKAGE_kmod-fs-msdos=m
+< CONFIG_PACKAGE_kmod-fs-nfs=m
+< CONFIG_PACKAGE_kmod-fs-nfs-common=m
+< CONFIG_PACKAGE_kmod-fs-nfs-common-rpcsec=m
+< CONFIG_PACKAGE_kmod-fs-nfs-v3=m
+< CONFIG_PACKAGE_kmod-fs-nfs-v4=m
+< CONFIG_PACKAGE_kmod-fs-nfsd=m
+< CONFIG_PACKAGE_kmod-fs-ntfs=m
+< CONFIG_PACKAGE_kmod-fs-reiserfs=m
+< CONFIG_PACKAGE_kmod-fs-squashfs=m
+< CONFIG_PACKAGE_kmod-fs-udf=m
+< CONFIG_PACKAGE_kmod-fs-vfat=m
+< CONFIG_PACKAGE_kmod-fs-xfs=m
+---
+> CONFIG_PACKAGE_kmod-fs-cifs=y
+> CONFIG_PACKAGE_kmod-fs-exfat=y
+> CONFIG_PACKAGE_kmod-fs-exportfs=y
+> CONFIG_PACKAGE_kmod-fs-ext4=y
+> CONFIG_PACKAGE_kmod-fs-nfs=y
+> CONFIG_PACKAGE_kmod-fs-nfs-common=y
+> CONFIG_PACKAGE_kmod-fs-nfs-common-rpcsec=y
+> CONFIG_PACKAGE_kmod-fs-nfs-v4=y
+> CONFIG_PACKAGE_kmod-fs-nfsd=y
+> CONFIG_PACKAGE_kmod-fs-ntfs=y
+> CONFIG_PACKAGE_kmod-fs-vfat=y
+1925,1928c1889
+< CONFIG_PACKAGE_kmod-firewire=m
+< CONFIG_PACKAGE_kmod-firewire-net=m
+< CONFIG_PACKAGE_kmod-firewire-ohci=m
+< CONFIG_PACKAGE_kmod-firewire-sbp2=m
+---
+1933,1959c1894
+< CONFIG_PACKAGE_kmod-hwmon-core=m
+< CONFIG_PACKAGE_kmod-hwmon-adcxx=m
+< CONFIG_PACKAGE_kmod-hwmon-ads1015=m
+< CONFIG_PACKAGE_kmod-hwmon-adt7410=m
+< CONFIG_PACKAGE_kmod-hwmon-adt7475=m
+< CONFIG_PACKAGE_kmod-hwmon-gpiofan=m
+< CONFIG_PACKAGE_kmod-hwmon-ina209=m
+< CONFIG_PACKAGE_kmod-hwmon-ina2xx=m
+< CONFIG_PACKAGE_kmod-hwmon-it87=m
+< CONFIG_PACKAGE_kmod-hwmon-lm63=m
+< CONFIG_PACKAGE_kmod-hwmon-lm75=m
+< CONFIG_PACKAGE_kmod-hwmon-lm77=m
+< CONFIG_PACKAGE_kmod-hwmon-lm85=m
+< CONFIG_PACKAGE_kmod-hwmon-lm90=m
+< CONFIG_PACKAGE_kmod-hwmon-lm92=m
+< CONFIG_PACKAGE_kmod-hwmon-lm95241=m
+< CONFIG_PACKAGE_kmod-hwmon-ltc4151=m
+< CONFIG_PACKAGE_kmod-hwmon-pwmfan=m
+< CONFIG_PACKAGE_kmod-hwmon-sch5627=m
+< CONFIG_PACKAGE_kmod-hwmon-sht21=m
+< CONFIG_PACKAGE_kmod-hwmon-tmp102=m
+< CONFIG_PACKAGE_kmod-hwmon-tmp103=m
+< CONFIG_PACKAGE_kmod-hwmon-tmp421=m
+< CONFIG_PACKAGE_kmod-hwmon-vid=m
+< CONFIG_PACKAGE_kmod-hwmon-w83793=m
+< CONFIG_PACKAGE_kmod-pmbus-core=m
+< CONFIG_PACKAGE_kmod-pmbus-zl6100=m
+---
+1964,1975c1899,1900
+< CONFIG_PACKAGE_kmod-i2c-core=m
+< CONFIG_PACKAGE_kmod-i2c-algo-bit=m
+< CONFIG_PACKAGE_kmod-i2c-algo-pca=m
+< CONFIG_PACKAGE_kmod-i2c-algo-pcf=m
+< CONFIG_PACKAGE_kmod-i2c-gpio=m
+< CONFIG_PACKAGE_kmod-i2c-gpio-custom=m
+< CONFIG_PACKAGE_kmod-i2c-mux=m
+< CONFIG_PACKAGE_kmod-i2c-mux-gpio=m
+< CONFIG_PACKAGE_kmod-i2c-mux-pca9541=m
+< CONFIG_PACKAGE_kmod-i2c-mux-pca954x=m
+< CONFIG_PACKAGE_kmod-i2c-smbus=m
+< CONFIG_PACKAGE_kmod-i2c-tiny-usb=m
+---
+1980,1992c1905,1917
+< CONFIG_PACKAGE_kmod-iio-ad799x=m
+< CONFIG_PACKAGE_kmod-iio-am2315=m
+< CONFIG_PACKAGE_kmod-iio-bh1750=m
+< CONFIG_PACKAGE_kmod-iio-bmp280=m
+< CONFIG_PACKAGE_kmod-iio-bmp280-i2c=m
+< CONFIG_PACKAGE_kmod-iio-bmp280-spi=m
+< CONFIG_PACKAGE_kmod-iio-ccs811=m
+< CONFIG_PACKAGE_kmod-iio-core=m
+< CONFIG_PACKAGE_kmod-iio-dht11=m
+< CONFIG_PACKAGE_kmod-iio-hmc5843=m
+< CONFIG_PACKAGE_kmod-iio-htu21=m
+< CONFIG_PACKAGE_kmod-iio-si7020=m
+< CONFIG_PACKAGE_kmod-iio-tsl4531=m
+---
+1997,2008c1922,1933
+< CONFIG_PACKAGE_kmod-hid=m
+< CONFIG_PACKAGE_kmod-hid-generic=m
+< CONFIG_PACKAGE_kmod-input-core=m
+< CONFIG_PACKAGE_kmod-input-evdev=m
+< CONFIG_PACKAGE_kmod-input-gpio-encoder=m
+< CONFIG_PACKAGE_kmod-input-gpio-keys=m
+< CONFIG_PACKAGE_kmod-input-gpio-keys-polled=m
+< CONFIG_PACKAGE_kmod-input-joydev=m
+< CONFIG_PACKAGE_kmod-input-matrixkmap=m
+< CONFIG_PACKAGE_kmod-input-polldev=m
+< CONFIG_PACKAGE_kmod-input-touchscreen-ads7846=m
+< CONFIG_PACKAGE_kmod-input-uinput=m
+---
+2014,2021c1939,1946
+< CONFIG_PACKAGE_kmod-leds-pca963x=m
+< CONFIG_PACKAGE_kmod-ledtrig-default-on=y
+< CONFIG_PACKAGE_kmod-ledtrig-gpio=m
+< CONFIG_PACKAGE_kmod-ledtrig-heartbeat=y
+< CONFIG_PACKAGE_kmod-ledtrig-netdev=y
+< CONFIG_PACKAGE_kmod-ledtrig-oneshot=m
+< CONFIG_PACKAGE_kmod-ledtrig-timer=y
+< CONFIG_PACKAGE_kmod-ledtrig-transient=m
+---
+2026,2027c1951
+< CONFIG_PACKAGE_kmod-asn1-decoder=m
+< CONFIG_PACKAGE_kmod-lib-cordic=m
+---
+2029,2041c1953,1958
+< CONFIG_PACKAGE_kmod-lib-crc-itu-t=m
+< CONFIG_PACKAGE_kmod-lib-crc16=m
+< CONFIG_PACKAGE_kmod-lib-crc32c=m
+< CONFIG_PACKAGE_kmod-lib-crc7=m
+< CONFIG_PACKAGE_kmod-lib-crc8=m
+< CONFIG_PACKAGE_kmod-lib-lz4=m
+< CONFIG_PACKAGE_kmod-lib-lzo=m
+< CONFIG_PACKAGE_kmod-lib-raid6=m
+< CONFIG_PACKAGE_kmod-lib-textsearch=m
+< CONFIG_PACKAGE_kmod-lib-xor=m
+< CONFIG_PACKAGE_kmod-lib-zlib-deflate=m
+< CONFIG_PACKAGE_kmod-lib-zlib-inflate=m
+< CONFIG_PACKAGE_kmod-lib-zstd=m
+---
+> CONFIG_PACKAGE_kmod-lib-crc16=y
+2047,2055c1964,1972
+< CONFIG_PACKAGE_kmod-nls-cp1250=m
+< CONFIG_PACKAGE_kmod-nls-cp1251=m
+< CONFIG_PACKAGE_kmod-nls-cp437=m
+< CONFIG_PACKAGE_kmod-nls-cp775=m
+< CONFIG_PACKAGE_kmod-nls-cp850=m
+< CONFIG_PACKAGE_kmod-nls-cp852=m
+< CONFIG_PACKAGE_kmod-nls-cp862=m
+< CONFIG_PACKAGE_kmod-nls-cp864=m
+< CONFIG_PACKAGE_kmod-nls-cp866=m
+---
+> CONFIG_PACKAGE_kmod-nls-cp437=y
+2060,2065c1977,1982
+< CONFIG_PACKAGE_kmod-nls-iso8859-13=m
+< CONFIG_PACKAGE_kmod-nls-iso8859-15=m
+< CONFIG_PACKAGE_kmod-nls-iso8859-2=m
+< CONFIG_PACKAGE_kmod-nls-iso8859-6=m
+< CONFIG_PACKAGE_kmod-nls-iso8859-8=m
+< CONFIG_PACKAGE_kmod-nls-koi8r=m
+---
+2071,2076c1988,1993
+< CONFIG_PACKAGE_kmod-arptables=m
+< CONFIG_PACKAGE_kmod-br-netfilter=m
+< CONFIG_PACKAGE_kmod-ebtables=m
+< CONFIG_PACKAGE_kmod-ebtables-ipv4=m
+< CONFIG_PACKAGE_kmod-ebtables-ipv6=m
+< CONFIG_PACKAGE_kmod-ebtables-watchers=m
+---
+2078,2085c1995,2002
+< CONFIG_PACKAGE_kmod-ip6tables-extra=m
+< CONFIG_PACKAGE_kmod-ipt-account=m
+< CONFIG_PACKAGE_kmod-ipt-chaos=m
+< CONFIG_PACKAGE_kmod-ipt-checksum=m
+< CONFIG_PACKAGE_kmod-ipt-cluster=m
+< CONFIG_PACKAGE_kmod-ipt-clusterip=m
+< CONFIG_PACKAGE_kmod-ipt-compat-xtables=m
+< CONFIG_PACKAGE_kmod-ipt-condition=m
+---
+2087,2088c2004,2005
+< CONFIG_PACKAGE_kmod-ipt-conntrack-extra=m
+< CONFIG_PACKAGE_kmod-ipt-conntrack-label=m
+---
+> CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
+2090,2104c2007,2022
+< CONFIG_PACKAGE_kmod-ipt-debug=m
+< CONFIG_PACKAGE_kmod-ipt-delude=m
+< CONFIG_PACKAGE_kmod-ipt-dhcpmac=m
+< CONFIG_PACKAGE_kmod-ipt-dnetmap=m
+< CONFIG_PACKAGE_kmod-ipt-extra=m
+< CONFIG_PACKAGE_kmod-ipt-filter=m
+< CONFIG_PACKAGE_kmod-ipt-fuzzy=m
+< CONFIG_PACKAGE_kmod-ipt-geoip=m
+< CONFIG_PACKAGE_kmod-ipt-hashlimit=m
+< CONFIG_PACKAGE_kmod-ipt-iface=m
+< CONFIG_PACKAGE_kmod-ipt-ipmark=m
+< CONFIG_PACKAGE_kmod-ipt-ipopt=m
+< CONFIG_PACKAGE_kmod-ipt-ipp2p=m
+< CONFIG_PACKAGE_kmod-ipt-iprange=m
+< CONFIG_PACKAGE_kmod-ipt-ipsec=m
+---
+> CONFIG_PACKAGE_kmod-ipt-fullconenat=y
+> CONFIG_PACKAGE_kmod-ipt-ipopt=y
+2106,2111c2024,2029
+< CONFIG_PACKAGE_kmod-ipt-ipv4options=m
+< CONFIG_PACKAGE_kmod-ipt-led=m
+< CONFIG_PACKAGE_kmod-ipt-length2=m
+< CONFIG_PACKAGE_kmod-ipt-logmark=m
+< CONFIG_PACKAGE_kmod-ipt-lscan=m
+< CONFIG_PACKAGE_kmod-ipt-lua=m
+---
+2113c2031
+< CONFIG_PACKAGE_kmod-ipt-nat-extra=m
+---
+> CONFIG_PACKAGE_kmod-ipt-nat-extra=y
+2115,2117c2033,2035
+< CONFIG_PACKAGE_kmod-ipt-nathelper-rtsp=m
+< CONFIG_PACKAGE_kmod-ipt-nflog=m
+< CONFIG_PACKAGE_kmod-ipt-nfqueue=m
+---
+> CONFIG_PACKAGE_kmod-ipt-nflog=y
+> CONFIG_PACKAGE_kmod-ipt-nfqueue=y
+2119,2129c2037,2045
+< CONFIG_PACKAGE_kmod-ipt-physdev=m
+< CONFIG_PACKAGE_kmod-ipt-proto=m
+< CONFIG_PACKAGE_kmod-ipt-psd=m
+< CONFIG_PACKAGE_kmod-ipt-quota2=m
+< CONFIG_PACKAGE_kmod-ipt-raw=m
+< CONFIG_PACKAGE_kmod-ipt-raw6=m
+< CONFIG_PACKAGE_kmod-ipt-rpfilter=m
+< CONFIG_PACKAGE_kmod-ipt-rtpengine=m
+< CONFIG_PACKAGE_kmod-ipt-sysrq=m
+< CONFIG_PACKAGE_kmod-ipt-tarpit=m
+< CONFIG_PACKAGE_kmod-ipt-tee=m
+---
+> CONFIG_PACKAGE_kmod-ipt-raw=y
+2131,2133c2047,2049
+< CONFIG_PACKAGE_kmod-ipt-u32=m
+< CONFIG_PACKAGE_kmod-ipt-ulog=m
+< CONFIG_PACKAGE_kmod-netatop=m
+---
+> CONFIG_PACKAGE_kmod-ipt-u32=y
+2140,2142c2056
+< CONFIG_PACKAGE_kmod-nf-ipvs=m
+< CONFIG_PACKAGE_kmod-nf-ipvs-ftp=m
+< CONFIG_PACKAGE_kmod-nf-ipvs-sip=m
+---
+2145,2146c2059,2060
+< CONFIG_PACKAGE_kmod-nf-nathelper=m
+< CONFIG_PACKAGE_kmod-nf-nathelper-extra=m
+---
+2150,2159c2064,2073
+< CONFIG_PACKAGE_kmod-nfnetlink-log=m
+< CONFIG_PACKAGE_kmod-nfnetlink-queue=m
+< CONFIG_PACKAGE_kmod-nft-arp=m
+< CONFIG_PACKAGE_kmod-nft-bridge=m
+< CONFIG_PACKAGE_kmod-nft-core=m
+< CONFIG_PACKAGE_kmod-nft-fib=m
+< CONFIG_PACKAGE_kmod-nft-nat=m
+< CONFIG_PACKAGE_kmod-nft-nat6=m
+< CONFIG_PACKAGE_kmod-nft-netdev=m
+< CONFIG_PACKAGE_kmod-nft-offload=m
+---
+> CONFIG_PACKAGE_kmod-nfnetlink-log=y
+> CONFIG_PACKAGE_kmod-nfnetlink-queue=y
+2164,2221c2078,2135
+< CONFIG_PACKAGE_kmod-3c59x=m
+< CONFIG_PACKAGE_kmod-8139cp=m
+< CONFIG_PACKAGE_kmod-8139too=m
+< CONFIG_PACKAGE_kmod-atl1=m
+< CONFIG_PACKAGE_kmod-atl1c=m
+< CONFIG_PACKAGE_kmod-atl1e=m
+< CONFIG_PACKAGE_kmod-atl2=m
+< CONFIG_PACKAGE_kmod-b44=m
+< CONFIG_PACKAGE_kmod-be2net=m
+< CONFIG_PACKAGE_kmod-bnx2=m
+< CONFIG_PACKAGE_kmod-dm9000=m
+< CONFIG_PACKAGE_kmod-dummy=m
+< CONFIG_PACKAGE_kmod-e100=m
+< CONFIG_PACKAGE_kmod-e1000=m
+< CONFIG_PACKAGE_kmod-et131x=m
+< CONFIG_PACKAGE_kmod-ethoc=m
+< CONFIG_PACKAGE_kmod-forcedeth=m
+< CONFIG_PACKAGE_kmod-gigaset=m
+< CONFIG_PACKAGE_kmod-hfcmulti=m
+< CONFIG_PACKAGE_kmod-hfcpci=m
+< CONFIG_PACKAGE_kmod-ifb=m
+< CONFIG_PACKAGE_kmod-igb=m
+< CONFIG_PACKAGE_kmod-ixgbe=m
+< CONFIG_PACKAGE_kmod-ixgbevf=m
+< CONFIG_PACKAGE_kmod-libphy=m
+< CONFIG_PACKAGE_kmod-macvlan=m
+< CONFIG_PACKAGE_kmod-mdio-gpio=m
+< CONFIG_PACKAGE_kmod-mii=m
+< CONFIG_PACKAGE_kmod-natsemi=m
+< CONFIG_PACKAGE_kmod-ne2k-pci=m
+< CONFIG_PACKAGE_kmod-niu=m
+< CONFIG_PACKAGE_kmod-of-mdio=m
+< CONFIG_PACKAGE_kmod-pcnet32=m
+< CONFIG_PACKAGE_kmod-phy-broadcom=m
+< CONFIG_PACKAGE_kmod-phy-realtek=m
+< CONFIG_PACKAGE_kmod-phylib-broadcom=m
+< CONFIG_PACKAGE_kmod-r6040=m
+< CONFIG_PACKAGE_kmod-r8169=m
+< CONFIG_PACKAGE_kmod-siit=m
+< CONFIG_PACKAGE_kmod-sis190=m
+< CONFIG_PACKAGE_kmod-sis900=m
+< CONFIG_PACKAGE_kmod-skge=m
+< CONFIG_PACKAGE_kmod-sky2=m
+< CONFIG_PACKAGE_kmod-solos-pci=m
+< CONFIG_PACKAGE_kmod-spi-ks8995=m
+< CONFIG_PACKAGE_kmod-swconfig=m
+< CONFIG_PACKAGE_kmod-switch-ip17xx=m
+< CONFIG_PACKAGE_kmod-switch-mvsw61xx=m
+< CONFIG_PACKAGE_kmod-switch-rtl8306=m
+< CONFIG_PACKAGE_kmod-switch-rtl8366-smi=m
+< CONFIG_PACKAGE_kmod-switch-rtl8366rb=m
+< CONFIG_PACKAGE_kmod-switch-rtl8366s=m
+< CONFIG_PACKAGE_kmod-switch-rtl8367b=m
+< CONFIG_PACKAGE_kmod-tg3=m
+< CONFIG_PACKAGE_kmod-tulip=m
+< CONFIG_PACKAGE_kmod-via-rhine=m
+< CONFIG_PACKAGE_kmod-via-velocity=m
+< CONFIG_PACKAGE_kmod-vmxnet3=m
+---
+> CONFIG_PACKAGE_kmod-macvlan=y
+2226,2283c2140,2175
+< CONFIG_PACKAGE_kmod-atm=m
+< CONFIG_PACKAGE_kmod-atmtcp=m
+< CONFIG_PACKAGE_kmod-ax25=m
+< CONFIG_PACKAGE_kmod-batman-adv=m
+< CONFIG_BATMAN_ADV_BATMAN_V=y
+< CONFIG_BATMAN_ADV_BLA=y
+< CONFIG_BATMAN_ADV_DAT=y
+< CONFIG_BATMAN_ADV_MCAST=y
+< CONFIG_PACKAGE_kmod-bonding=m
+< CONFIG_PACKAGE_kmod-bpf-test=m
+< CONFIG_PACKAGE_kmod-capi=m
+< CONFIG_PACKAGE_kmod-dnsresolver=m
+< CONFIG_PACKAGE_kmod-fou=m
+< CONFIG_PACKAGE_kmod-fou6=m
+< CONFIG_PACKAGE_kmod-geneve=m
+< CONFIG_PACKAGE_kmod-gre=m
+< CONFIG_PACKAGE_kmod-gre6=m
+< CONFIG_PACKAGE_kmod-ip-vti=m
+< CONFIG_PACKAGE_kmod-ip6-tunnel=m
+< CONFIG_PACKAGE_kmod-ip6-vti=m
+< CONFIG_PACKAGE_kmod-ipip=m
+< CONFIG_PACKAGE_kmod-ipoa=m
+< CONFIG_PACKAGE_kmod-ipsec=m
+< CONFIG_PACKAGE_kmod-ipsec4=m
+< CONFIG_PACKAGE_kmod-ipsec6=m
+< CONFIG_PACKAGE_kmod-iptunnel=m
+< CONFIG_PACKAGE_kmod-iptunnel4=m
+< CONFIG_PACKAGE_kmod-iptunnel6=m
+< CONFIG_PACKAGE_kmod-isdn4linux=m
+< CONFIG_PACKAGE_kmod-jool=m
+< CONFIG_PACKAGE_kmod-l2tp=m
+< CONFIG_PACKAGE_kmod-l2tp-eth=m
+< CONFIG_PACKAGE_kmod-l2tp-ip=m
+< CONFIG_PACKAGE_kmod-macremapper=m
+< CONFIG_PACKAGE_kmod-macsec=m
+< CONFIG_PACKAGE_kmod-mdio=m
+< CONFIG_PACKAGE_kmod-misdn=m
+< CONFIG_PACKAGE_kmod-mpls=m
+< CONFIG_PACKAGE_kmod-nat46=m
+< CONFIG_PACKAGE_kmod-netem=m
+< CONFIG_PACKAGE_kmod-nlmon=m
+< CONFIG_PACKAGE_kmod-openvswitch=m
+< CONFIG_PACKAGE_kmod-openvswitch-geneve=m
+< CONFIG_PACKAGE_kmod-openvswitch-geneve-intree=m
+< CONFIG_PACKAGE_kmod-openvswitch-gre=m
+< CONFIG_PACKAGE_kmod-openvswitch-gre-intree=m
+< CONFIG_PACKAGE_kmod-openvswitch-intree=m
+< CONFIG_PACKAGE_kmod-openvswitch-lisp-intree=m
+< CONFIG_PACKAGE_kmod-openvswitch-stt-intree=m
+< CONFIG_PACKAGE_kmod-openvswitch-vxlan=m
+< CONFIG_PACKAGE_kmod-openvswitch-vxlan-intree=m
+< CONFIG_PACKAGE_kmod-pf-ring=m
+< CONFIG_PACKAGE_kmod-pktgen=m
+---
+> CONFIG_PACKAGE_kmod-dnsresolver=y
+> CONFIG_PACKAGE_kmod-gre=y
+> CONFIG_PACKAGE_kmod-ipip=y
+> CONFIG_PACKAGE_kmod-iptunnel=y
+> CONFIG_PACKAGE_kmod-iptunnel4=y
+2285,2287c2177,2179
+< CONFIG_PACKAGE_kmod-mppe=m
+< CONFIG_PACKAGE_kmod-ppp-synctty=m
+< CONFIG_PACKAGE_kmod-pppoa=m
+---
+> CONFIG_PACKAGE_kmod-mppe=y
+2289c2181
+< CONFIG_PACKAGE_kmod-pppol2tp=m
+---
+2291,2303c2183,2195
+< CONFIG_PACKAGE_kmod-pptp=m
+< CONFIG_PACKAGE_kmod-sched=m
+< CONFIG_PACKAGE_kmod-sched-act-vlan=m
+< CONFIG_PACKAGE_kmod-sched-bpf=m
+< CONFIG_PACKAGE_kmod-sched-cake=m
+< CONFIG_PACKAGE_kmod-sched-connmark=m
+< CONFIG_PACKAGE_kmod-sched-core=m
+< CONFIG_PACKAGE_kmod-sched-ctinfo=m
+< CONFIG_PACKAGE_kmod-sched-flower=m
+< CONFIG_PACKAGE_kmod-sched-ipset=m
+< CONFIG_PACKAGE_kmod-sched-mqprio=m
+< CONFIG_PACKAGE_kmod-sctp=m
+< CONFIG_PACKAGE_kmod-sit=m
+---
+> CONFIG_PACKAGE_kmod-sit=y
+2305c2197
+< CONFIG_PACKAGE_kmod-slip=m
+---
+2307c2199
+< CONFIG_PACKAGE_kmod-trelay=m
+---
+2311,2312c2203,2204
+< CONFIG_PACKAGE_kmod-veth=m
+< CONFIG_PACKAGE_kmod-vxlan=m
+---
+2318,2334c2210,2225
+< CONFIG_PACKAGE_kmod-6lowpan=m
+< CONFIG_PACKAGE_kmod-ath3k=m
+< CONFIG_PACKAGE_kmod-bcma=m
+< CONFIG_PACKAGE_kmod-bluetooth=m
+< CONFIG_PACKAGE_kmod-bluetooth_6lowpan=m
+< CONFIG_PACKAGE_kmod-bmp085=m
+< CONFIG_PACKAGE_kmod-bmp085-i2c=m
+< CONFIG_PACKAGE_kmod-bmp085-spi=m
+< CONFIG_PACKAGE_kmod-btmrvl=m
+< CONFIG_PACKAGE_kmod-button-hotplug=m
+< CONFIG_PACKAGE_kmod-dma-buf=m
+< CONFIG_PACKAGE_kmod-dma-ralink=m
+< CONFIG_PACKAGE_kmod-echo=m
+< CONFIG_PACKAGE_kmod-eeprom-93cx6=m
+< CONFIG_PACKAGE_kmod-eeprom-at24=m
+< CONFIG_PACKAGE_kmod-eeprom-at25=m
+< CONFIG_PACKAGE_kmod-gpio-beeper=m
+---
+2336,2383c2227,2270
+< CONFIG_PACKAGE_kmod-gpio-dev=m
+< CONFIG_PACKAGE_kmod-gpio-mcp23s08=m
+< CONFIG_PACKAGE_kmod-gpio-nxp-74hc164=m
+< CONFIG_PACKAGE_kmod-gpio-pca953x=m
+< CONFIG_PACKAGE_kmod-gpio-pcf857x=m
+< CONFIG_PACKAGE_kmod-hsdma-mtk=m
+< CONFIG_PACKAGE_kmod-ikconfig=m
+< CONFIG_PACKAGE_kmod-it87-wdt=m
+< CONFIG_PACKAGE_kmod-itco-wdt=m
+< CONFIG_PACKAGE_kmod-lp=m
+< CONFIG_PACKAGE_kmod-mmc=m
+< CONFIG_PACKAGE_kmod-mtd-rw=m
+< CONFIG_PACKAGE_kmod-mtdoops=m
+< CONFIG_PACKAGE_kmod-mtdram=m
+< CONFIG_PACKAGE_kmod-mtdtests=m
+< CONFIG_PACKAGE_kmod-nvmem=m
+< CONFIG_PACKAGE_kmod-parport-pc=m
+< CONFIG_PACKAGE_kmod-ppdev=m
+< CONFIG_PACKAGE_kmod-pps=m
+< CONFIG_PACKAGE_kmod-pps-gpio=m
+< CONFIG_PACKAGE_kmod-pps-ldisc=m
+< CONFIG_PACKAGE_kmod-ptp=m
+< CONFIG_PACKAGE_kmod-random-core=m
+< CONFIG_PACKAGE_kmod-random-tpm=m
+< CONFIG_PACKAGE_kmod-regmap-core=m
+< CONFIG_PACKAGE_kmod-regmap-i2c=m
+< CONFIG_PACKAGE_kmod-regmap-spi=m
+< CONFIG_PACKAGE_kmod-rtc-ds1307=m
+< CONFIG_PACKAGE_kmod-rtc-ds1374=m
+< CONFIG_PACKAGE_kmod-rtc-ds1672=m
+< CONFIG_PACKAGE_kmod-rtc-em3027=m
+< CONFIG_PACKAGE_kmod-rtc-isl1208=m
+< CONFIG_PACKAGE_kmod-rtc-pcf2123=m
+< CONFIG_PACKAGE_kmod-rtc-pcf8563=m
+< CONFIG_PACKAGE_kmod-rtc-pt7c4338=m
+< CONFIG_PACKAGE_kmod-rtc-rs5c372a=m
+< CONFIG_PACKAGE_kmod-sdhci=m
+< CONFIG_PACKAGE_kmod-sdhci-mt7620=m
+< CONFIG_PACKAGE_kmod-serial-8250=m
+< CONFIG_PACKAGE_kmod-serial-8250-exar=m
+< CONFIG_PACKAGE_kmod-softdog=m
+< CONFIG_PACKAGE_kmod-ssb=m
+< CONFIG_PACKAGE_kmod-tpm=m
+< CONFIG_PACKAGE_kmod-tpm-i2c-atmel=m
+< CONFIG_PACKAGE_kmod-tpm-i2c-infineon=m
+< CONFIG_PACKAGE_kmod-w83627hf-wdt=m
+< CONFIG_PACKAGE_kmod-wifidog-ng=m
+< CONFIG_PACKAGE_kmod-zram=m
+---
+2392,2396c2279,2283
+< CONFIG_PACKAGE_kmod-mmc-spi=m
+< CONFIG_PACKAGE_kmod-spi-bitbang=m
+< CONFIG_PACKAGE_kmod-spi-dev=m
+< CONFIG_PACKAGE_kmod-spi-gpio=m
+< CONFIG_PACKAGE_kmod-spi-gpio-custom=m
+---
+2401,2425c2288
+< CONFIG_PACKAGE_kmod-sound-core=m
+< CONFIG_PACKAGE_kmod-ac97=m
+< CONFIG_PACKAGE_kmod-sound-dummy=m
+< CONFIG_PACKAGE_kmod-sound-ens1371=m
+< CONFIG_PACKAGE_kmod-sound-hda-core=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-analog=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-ca0110=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-ca0132=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-cirrus=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-cmedia=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-conexant=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-hdmi=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-idt=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-realtek=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-si3054=m
+< CONFIG_PACKAGE_kmod-sound-hda-codec-via=m
+< CONFIG_PACKAGE_kmod-sound-hda-intel=m
+< CONFIG_PACKAGE_kmod-sound-i8x0=m
+< CONFIG_PACKAGE_kmod-sound-mpu401=m
+< CONFIG_PACKAGE_kmod-sound-mt7620=m
+< CONFIG_PACKAGE_kmod-sound-seq=m
+< CONFIG_PACKAGE_kmod-sound-soc-ac97=m
+< CONFIG_PACKAGE_kmod-sound-soc-core=m
+< CONFIG_PACKAGE_kmod-sound-via82xx=m
+< CONFIG_PACKAGE_kmod-usb-audio=m
+---
+2430,2436c2293,2296
+< CONFIG_PACKAGE_kmod-chaoskey=m
+< CONFIG_PACKAGE_kmod-usb-acm=m
+< CONFIG_PACKAGE_kmod-usb-atm=m
+< CONFIG_PACKAGE_kmod-usb-atm-cxacru=m
+< CONFIG_PACKAGE_kmod-usb-atm-speedtouch=m
+< CONFIG_PACKAGE_kmod-usb-atm-ueagle=m
+< CONFIG_PACKAGE_kmod-usb-cm109=m
+---
+2438,2439c2298,2299
+< CONFIG_PACKAGE_kmod-usb-dwc2=m
+< CONFIG_PACKAGE_kmod-usb-dwc3=m
+---
+2441,2501c2301,2313
+< CONFIG_PACKAGE_kmod-usb-hid=m
+< CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=m
+< CONFIG_PACKAGE_kmod-usb-net=m
+< CONFIG_PACKAGE_kmod-usb-net-asix=m
+< CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=m
+< CONFIG_PACKAGE_kmod-usb-net-cdc-eem=m
+< CONFIG_PACKAGE_kmod-usb-net-cdc-ether=m
+< CONFIG_PACKAGE_kmod-usb-net-cdc-mbim=m
+< CONFIG_PACKAGE_kmod-usb-net-cdc-ncm=m
+< CONFIG_PACKAGE_kmod-usb-net-cdc-subset=m
+< CONFIG_PACKAGE_kmod-usb-net-dm9601-ether=m
+< CONFIG_PACKAGE_kmod-usb-net-hso=m
+< CONFIG_PACKAGE_kmod-usb-net-huawei-cdc-ncm=m
+< CONFIG_PACKAGE_kmod-usb-net-ipheth=m
+< CONFIG_PACKAGE_kmod-usb-net-kalmia=m
+< CONFIG_PACKAGE_kmod-usb-net-kaweth=m
+< CONFIG_PACKAGE_kmod-usb-net-mcs7830=m
+< CONFIG_PACKAGE_kmod-usb-net-pegasus=m
+< CONFIG_PACKAGE_kmod-usb-net-pl=m
+< CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=m
+< CONFIG_PACKAGE_kmod-usb-net-rndis=m
+< CONFIG_PACKAGE_kmod-usb-net-rtl8150=m
+< CONFIG_PACKAGE_kmod-usb-net-rtl8152=m
+< CONFIG_PACKAGE_kmod-usb-net-sierrawireless=m
+< CONFIG_PACKAGE_kmod-usb-net-smsc95xx=m
+< CONFIG_PACKAGE_kmod-usb-net-sr9700=m
+< CONFIG_PACKAGE_kmod-usb-ohci=m
+< CONFIG_PACKAGE_kmod-usb-ohci-pci=m
+< CONFIG_PACKAGE_kmod-usb-printer=m
+< CONFIG_PACKAGE_kmod-usb-serial=m
+< CONFIG_PACKAGE_kmod-usb-serial-ark3116=m
+< CONFIG_PACKAGE_kmod-usb-serial-belkin=m
+< CONFIG_PACKAGE_kmod-usb-serial-ch341=m
+< CONFIG_PACKAGE_kmod-usb-serial-cp210x=m
+< CONFIG_PACKAGE_kmod-usb-serial-cypress-m8=m
+< CONFIG_PACKAGE_kmod-usb-serial-dmx_usb_module=m
+< CONFIG_PACKAGE_kmod-usb-serial-edgeport=m
+< CONFIG_PACKAGE_kmod-usb-serial-ftdi=m
+< CONFIG_PACKAGE_kmod-usb-serial-garmin=m
+< CONFIG_PACKAGE_kmod-usb-serial-ipw=m
+< CONFIG_PACKAGE_kmod-usb-serial-keyspan=m
+< CONFIG_PACKAGE_kmod-usb-serial-mct=m
+< CONFIG_PACKAGE_kmod-usb-serial-mos7720=m
+< CONFIG_PACKAGE_kmod-usb-serial-mos7840=m
+< CONFIG_PACKAGE_kmod-usb-serial-option=m
+< CONFIG_PACKAGE_kmod-usb-serial-oti6858=m
+< CONFIG_PACKAGE_kmod-usb-serial-pl2303=m
+< CONFIG_PACKAGE_kmod-usb-serial-qualcomm=m
+< CONFIG_PACKAGE_kmod-usb-serial-sierrawireless=m
+< CONFIG_PACKAGE_kmod-usb-serial-simple=m
+< CONFIG_PACKAGE_kmod-usb-serial-ti-usb=m
+< CONFIG_PACKAGE_kmod-usb-serial-visor=m
+< CONFIG_PACKAGE_kmod-usb-serial-wwan=m
+< CONFIG_PACKAGE_kmod-usb-serial-xr_usb_serial_common=m
+< CONFIG_PACKAGE_kmod-usb-storage=m
+< CONFIG_PACKAGE_kmod-usb-storage-extras=m
+< CONFIG_PACKAGE_kmod-usb-storage-uas=m
+< CONFIG_PACKAGE_kmod-usb-test=m
+< CONFIG_PACKAGE_kmod-usb-uhci=m
+< CONFIG_PACKAGE_kmod-usb-wdm=m
+< CONFIG_PACKAGE_kmod-usb-yealink=m
+---
+> CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
+> CONFIG_PACKAGE_kmod-usb-ohci=y
+> CONFIG_PACKAGE_kmod-usb-printer=y
+> CONFIG_PACKAGE_kmod-usb-storage=y
+> CONFIG_PACKAGE_kmod-usb-storage-extras=y
+> CONFIG_PACKAGE_kmod-usb-uhci=y
+2505,2508c2317,2320
+< CONFIG_PACKAGE_kmod-usbip=m
+< CONFIG_PACKAGE_kmod-usbip-client=m
+< CONFIG_PACKAGE_kmod-usbip-server=m
+< CONFIG_PACKAGE_kmod-usbmon=m
+---
+2513,2551c2325
+< CONFIG_PACKAGE_kmod-video-core=m
+< CONFIG_PACKAGE_kmod-video-cpia2=m
+< CONFIG_PACKAGE_kmod-video-gspca-core=m
+< CONFIG_PACKAGE_kmod-video-gspca-conex=m
+< CONFIG_PACKAGE_kmod-video-gspca-etoms=m
+< CONFIG_PACKAGE_kmod-video-gspca-finepix=m
+< CONFIG_PACKAGE_kmod-video-gspca-gl860=m
+< CONFIG_PACKAGE_kmod-video-gspca-jeilinj=m
+< CONFIG_PACKAGE_kmod-video-gspca-konica=m
+< CONFIG_PACKAGE_kmod-video-gspca-m5602=m
+< CONFIG_PACKAGE_kmod-video-gspca-mars=m
+< CONFIG_PACKAGE_kmod-video-gspca-mr97310a=m
+< CONFIG_PACKAGE_kmod-video-gspca-ov519=m
+< CONFIG_PACKAGE_kmod-video-gspca-ov534=m
+< CONFIG_PACKAGE_kmod-video-gspca-ov534-9=m
+< CONFIG_PACKAGE_kmod-video-gspca-pac207=m
+< CONFIG_PACKAGE_kmod-video-gspca-pac7311=m
+< CONFIG_PACKAGE_kmod-video-gspca-se401=m
+< CONFIG_PACKAGE_kmod-video-gspca-sn9c20x=m
+< CONFIG_PACKAGE_kmod-video-gspca-sonixb=m
+< CONFIG_PACKAGE_kmod-video-gspca-sonixj=m
+< CONFIG_PACKAGE_kmod-video-gspca-spca500=m
+< CONFIG_PACKAGE_kmod-video-gspca-spca501=m
+< CONFIG_PACKAGE_kmod-video-gspca-spca505=m
+< CONFIG_PACKAGE_kmod-video-gspca-spca506=m
+< CONFIG_PACKAGE_kmod-video-gspca-spca508=m
+< CONFIG_PACKAGE_kmod-video-gspca-spca561=m
+< CONFIG_PACKAGE_kmod-video-gspca-sq905=m
+< CONFIG_PACKAGE_kmod-video-gspca-sq905c=m
+< CONFIG_PACKAGE_kmod-video-gspca-stk014=m
+< CONFIG_PACKAGE_kmod-video-gspca-stv06xx=m
+< CONFIG_PACKAGE_kmod-video-gspca-sunplus=m
+< CONFIG_PACKAGE_kmod-video-gspca-t613=m
+< CONFIG_PACKAGE_kmod-video-gspca-tv8532=m
+< CONFIG_PACKAGE_kmod-video-gspca-vc032x=m
+< CONFIG_PACKAGE_kmod-video-gspca-zc3xx=m
+< CONFIG_PACKAGE_kmod-video-pwc=m
+< CONFIG_PACKAGE_kmod-video-uvc=m
+< CONFIG_PACKAGE_kmod-video-videobuf2=m
+---
+2559a2334
+2564,2574c2339
+< CONFIG_PACKAGE_kmod-w1=m
+< CONFIG_PACKAGE_kmod-w1-gpio-custom=m
+< CONFIG_PACKAGE_kmod-w1-master-ds2482=m
+< CONFIG_PACKAGE_kmod-w1-master-ds2490=m
+< CONFIG_PACKAGE_kmod-w1-master-gpio=m
+< CONFIG_PACKAGE_kmod-w1-slave-ds2413=m
+< CONFIG_PACKAGE_kmod-w1-slave-ds2431=m
+< CONFIG_PACKAGE_kmod-w1-slave-ds2433=m
+< CONFIG_PACKAGE_kmod-w1-slave-ds2760=m
+< CONFIG_PACKAGE_kmod-w1-slave-smem=m
+< CONFIG_PACKAGE_kmod-w1-slave-therm=m
+---
+2579,2586c2344,2351
+< CONFIG_PACKAGE_kmod-at86rf230=m
+< CONFIG_PACKAGE_kmod-atusb=m
+< CONFIG_PACKAGE_kmod-cc2520=m
+< CONFIG_PACKAGE_kmod-fakelb=m
+< CONFIG_PACKAGE_kmod-ieee802154=m
+< CONFIG_PACKAGE_kmod-ieee802154_6lowpan=m
+< CONFIG_PACKAGE_kmod-mac802154=m
+< CONFIG_PACKAGE_kmod-mrf24j40=m
+---
+2591,2656c2356,2372
+< CONFIG_PACKAGE_kmod-acx-mac80211=m
+< 
+< CONFIG_ACX_ID_16=y
+< CONFIG_ACX_DEFAULT=y
+< CONFIG_ACX_ID_19=y
+< CONFIG_PACKAGE_kmod-adm8211=m
+< CONFIG_PACKAGE_kmod-ath=m
+< CONFIG_ATH_USER_REGD=y
+< CONFIG_PACKAGE_ATH_DFS=y
+< CONFIG_PACKAGE_kmod-ath10k=m
+< CONFIG_ATH10K_LEDS=y
+< CONFIG_PACKAGE_kmod-ath10k-ct=m
+< CONFIG_ATH10K-CT_LEDS=y
+< CONFIG_PACKAGE_kmod-ath10k-ct-smallbuffers=m
+< CONFIG_PACKAGE_kmod-ath5k=m
+< CONFIG_PACKAGE_kmod-ath6kl=m
+< CONFIG_PACKAGE_kmod-ath6kl-sdio=m
+< CONFIG_PACKAGE_kmod-ath6kl-usb=m
+< CONFIG_PACKAGE_kmod-ath9k=m
+< CONFIG_PACKAGE_kmod-ath9k-common=m
+< CONFIG_PACKAGE_kmod-ath9k-htc=m
+< CONFIG_PACKAGE_kmod-b43=m
+< CONFIG_PACKAGE_B43_USE_SSB=m
+< CONFIG_PACKAGE_B43_USE_BCMA=m
+< CONFIG_B43_FW_5_100_138=y
+< CONFIG_B43_FW_SQUASH=y
+< CONFIG_B43_FW_SQUASH_COREREVS="5,6,7,8,9,10,11,13,15,16,28,29,30"
+< CONFIG_B43_FW_SQUASH_PHYTYPES="G,N,LP,HT"
+< CONFIG_PACKAGE_B43_BUSES_BCMA_AND_SSB=y
+< CONFIG_PACKAGE_B43_PHY_G=y
+< CONFIG_PACKAGE_B43_PHY_N=y
+< CONFIG_PACKAGE_B43_PHY_LP=y
+< CONFIG_PACKAGE_B43_PHY_HT=y
+< CONFIG_PACKAGE_kmod-b43legacy=m
+< CONFIG_PACKAGE_kmod-brcmfmac=m
+< CONFIG_BRCMFMAC_USB=y
+< CONFIG_BRCMFMAC_PCIE=y
+< CONFIG_PACKAGE_kmod-brcmsmac=m
+< CONFIG_BRCMSMAC_USE_FW_FROM_WL=y
+< CONFIG_PACKAGE_kmod-brcmutil=m
+< CONFIG_PACKAGE_kmod-carl9170=m
+---
+2658,2673c2374,2387
+< CONFIG_PACKAGE_kmod-hermes=m
+< CONFIG_PACKAGE_kmod-hermes-pci=m
+< CONFIG_PACKAGE_kmod-hermes-plx=m
+< CONFIG_PACKAGE_kmod-ipw2100=m
+< CONFIG_PACKAGE_kmod-ipw2200=m
+< CONFIG_PACKAGE_kmod-iwl-legacy=m
+< CONFIG_PACKAGE_kmod-iwl3945=m
+< CONFIG_PACKAGE_kmod-iwl4965=m
+< CONFIG_PACKAGE_kmod-iwlwifi=m
+< CONFIG_PACKAGE_kmod-lib80211=m
+< CONFIG_PACKAGE_kmod-libertas-sdio=m
+< CONFIG_PACKAGE_kmod-libertas-spi=m
+< CONFIG_PACKAGE_kmod-libertas-usb=m
+< CONFIG_PACKAGE_kmod-libipw=m
+---
+2678,2679c2392,2393
+< CONFIG_PACKAGE_kmod-mac80211-hwsim=m
+< CONFIG_PACKAGE_kmod-mt76=m
+---
+2681,2682c2395
+< CONFIG_PACKAGE_kmod-mt76-usb=m
+< CONFIG_PACKAGE_kmod-mt7601u=m
+---
+2684,2685c2397
+< CONFIG_PACKAGE_kmod-mt7615e=m
+< CONFIG_PACKAGE_kmod-mt76x0-common=m
+---
+2687,2689c2399,2400
+< CONFIG_PACKAGE_kmod-mt76x02-usb=m
+< CONFIG_PACKAGE_kmod-mt76x0e=m
+< CONFIG_PACKAGE_kmod-mt76x0u=m
+---
+2692,2738c2403,2436
+< CONFIG_PACKAGE_kmod-mt76x2u=m
+< CONFIG_PACKAGE_kmod-mwifiex-pcie=m
+< CONFIG_PACKAGE_kmod-mwifiex-sdio=m
+< CONFIG_PACKAGE_kmod-mwl8k=m
+< CONFIG_PACKAGE_kmod-net-prism54=m
+< CONFIG_PACKAGE_kmod-net-rtl8192su=m
+< CONFIG_PACKAGE_kmod-owl-loader=m
+< CONFIG_PACKAGE_kmod-p54-common=m
+< CONFIG_PACKAGE_kmod-p54-pci=m
+< CONFIG_PACKAGE_kmod-p54-usb=m
+< CONFIG_PACKAGE_kmod-rsi91x=m
+< CONFIG_PACKAGE_kmod-rsi91x-sdio=m
+< CONFIG_PACKAGE_kmod-rsi91x-usb=m
+< CONFIG_PACKAGE_kmod-rt2400-pci=m
+< CONFIG_PACKAGE_kmod-rt2500-pci=m
+< CONFIG_PACKAGE_kmod-rt2500-usb=m
+< CONFIG_PACKAGE_kmod-rt2800-lib=m
+< CONFIG_PACKAGE_kmod-rt2800-mmio=m
+< CONFIG_PACKAGE_kmod-rt2800-pci=m
+< CONFIG_PACKAGE_kmod-rt2800-usb=m
+< CONFIG_PACKAGE_kmod-rt2x00-lib=m
+< CONFIG_PACKAGE_kmod-rt2x00-mmio=m
+< CONFIG_PACKAGE_kmod-rt2x00-pci=m
+< CONFIG_PACKAGE_kmod-rt2x00-usb=m
+< CONFIG_PACKAGE_kmod-rt61-pci=m
+< CONFIG_PACKAGE_kmod-rt73-usb=m
+< CONFIG_PACKAGE_kmod-rtl8180=m
+< CONFIG_PACKAGE_kmod-rtl8187=m
+< CONFIG_PACKAGE_kmod-rtl8192c-common=m
+< CONFIG_PACKAGE_kmod-rtl8192ce=m
+< CONFIG_PACKAGE_kmod-rtl8192cu=m
+< CONFIG_PACKAGE_kmod-rtl8192de=m
+< CONFIG_PACKAGE_kmod-rtl8192se=m
+< CONFIG_PACKAGE_kmod-rtl8812au-ct=m
+< CONFIG_PACKAGE_kmod-rtl8821ae=m
+< CONFIG_PACKAGE_kmod-rtl8xxxu=m
+< CONFIG_PACKAGE_kmod-rtlwifi=m
+< CONFIG_PACKAGE_kmod-rtlwifi-btcoexist=m
+< CONFIG_PACKAGE_kmod-rtlwifi-pci=m
+< CONFIG_PACKAGE_kmod-rtlwifi-usb=m
+< CONFIG_PACKAGE_kmod-wl12xx=m
+< CONFIG_PACKAGE_kmod-wl18xx=m
+< CONFIG_PACKAGE_kmod-wlcore=m
+< CONFIG_PACKAGE_kmod-zd1211rw=m
+---
+2770,2774d2467
+< 
+< CONFIG_GOLANG_EXTERNAL_BOOTSTRAP_ROOT=""
+2782a2476,2480
+> 
+2793d2490
+2823d2519
+2827a2524
+> CONFIG_PACKAGE_luci-lib-fs=y
+2834a2532,2542
+2849c2557
+---
+2851a2560,2681
+> 
+2852a2683,2752
+2855a2756,2757
+2857c2759
+---
+2859a2762
+2860a2764
+2862c2766
+---
+2863a2768
+2864a2770
+2865a2772
+2866a2774
+2867a2776
+2868a2778
+2869a2780
+2870a2782
+2871a2784
+2872a2786
+2873a2788
+2874a2790
+2875a2792
+2876a2794
+2877a2796
+2879a2799
+2880a2801
+2881a2803
+2882a2805
+2883a2807,2809
+2884a2811
+2885a2813
+2886a2815
+2887a2817
+2888a2819
+2889a2821
+2890a2823
+2891a2825
+2892a2827
+2893a2829
+2894a2831
+2895a2833
+2897,2912d2834
+2913a2836
+2915c2838
+---
+2916a2840
+2917a2842
+2920a2846,2848
+2921a2850
+2922a2852
+2924,2925d2853
+2926a2855
+2927a2857
+2928a2859,2861
+2929a2863
+2930a2865
+2931a2867
+2933a2870
+2934a2872
+2935a2874
+2936a2876
+2938c2878
+---
+2944a2885
+2945a2887
+2947a2890
+2948a2892
+2950a2895
+2951a2897
+2952a2899
+2954c2901,2902
+---
+2955a2904
+2956a2906
+2957a2908
+2958a2910
+2959a2912
+2960a2914
+2962,2963c2916
+---
+2964a2918
+2965a2920
+2966a2922
+2967a2924
+2968a2926
+2970c2928
+---
+2972c2930
+---
+2974a2933,2934
+2975a2936
+2976a2938
+2978c2940
+---
+2980a2943
+2982c2945
+---
+2983a2947
+2984a2949
+2986c2951
+---
+2987a2953
+2988a2955
+2989a2957
+2991a2960,2961
+2992a2963
+2993a2965
+2995c2967
+---
+2997,2999c2969
+---
+3000a2971
+3001a2973
+3002a2975
+3003a2977
+3004a2979
+3005a2981
+3007d2982
+3008a2984
+3010,3012c2986
+---
+3013a2988
+3014a2990
+3015a2992
+3016a2994
+3017a2996
+3018a2998
+3019a3000
+3022c3003,3004
+---
+3024a3007
+3025a3009
+3026a3011
+3027a3013
+3028a3015
+3029a3017
+3030a3019
+3035a3025
+3041d3030
+3043a3033
+3056,3059d3045
+3063,3078d3048
+< 
+3084d3053
+3095c3064
+< CONFIG_PACKAGE_libiptc=m
+---
+3097c3066
+< CONFIG_PACKAGE_libxtables-nft=m
+---
+3107a3077,3080
+3108a3082,3084
+3109a3086,3088
+3110a3090,3092
+3111a3094,3096
+3112a3098,3100
+3113a3102,3104
+3114a3106,3108
+3115a3110,3112
+3116a3114,3116
+3117a3118,3120
+3118a3122,3124
+3119a3126,3128
+3120a3130,3132
+3121a3134,3136
+3122a3138,3140
+3123a3142,3144
+3124a3146,3148
+3125a3150,3152
+3126a3154,3156
+3127a3158,3160
+3128a3162,3164
+3129a3166,3168
+3130a3170,3172
+3131a3174,3176
+3132a3178,3180
+3133a3182,3184
+3134a3186,3188
+3135a3190,3192
+3136a3194,3196
+3137a3198,3200
+3138a3202,3204
+3139a3206,3208
+3140a3210,3212
+3141a3214,3216
+3142a3218,3220
+3143a3222,3224
+3144a3226,3228
+3145a3230,3232
+3146a3234,3236
+3147a3238,3240
+3148a3242,3244
+3149a3246,3248
+3150a3250,3252
+3151a3254,3256
+3152a3258,3260
+3153a3262,3264
+3154a3266,3268
+3155a3270,3272
+3156a3274,3276
+3157a3278,3280
+3158a3282,3284
+3159a3286,3288
+3160a3290,3364
+3161a3366,3368
+3162a3370,3372
+3163a3374,3376
+3164a3378,3380
+3165a3382,3384
+3166a3386,3388
+3167a3390,3392
+3168a3394,3396
+3169a3398,3400
+3170a3402,3404
+3171a3406,3408
+3172a3410,3412
+3173a3414,3416
+3174a3418,3420
+3175a3422,3424
+3176a3426,3428
+3177a3430,3432
+3178a3434,3436
+3179a3438,3440
+3180a3442,3444
+3181a3446,3448
+3182a3450,3452
+3183a3454,3456
+3184a3458,3460
+3185a3462,3464
+3186a3466,3468
+3187a3470,3472
+3188a3474,3476
+3189a3478,3480
+3190a3482,3484
+3191a3486,3488
+3192a3490,3492
+3193a3494,3496
+3194a3498,3500
+3195a3502,3504
+3196a3506,3508
+3197a3510,3512
+3198a3514,3516
+3199a3518,3520
+3200a3522,3524
+3201a3526,3528
+3202a3530,3532
+3203a3534,3536
+3204a3538,3540
+3205a3542,3544
+3206a3546,3548
+3207a3550,3552
+3208a3554,3556
+3209a3558,3560
+3210a3562,3564
+3211a3566,3568
+3212a3570,3572
+3213a3574,3576
+3214a3578,3580
+3215a3582,3584
+3216a3586,3588
+3217a3590,3592
+3218a3594,3596
+3219a3598,3600
+3220a3602,3604
+3221a3606,3608
+3222a3610,3612
+3223a3614,3616
+3224a3618,3620
+3225a3622,3624
+3226a3626,3628
+3227a3630,3632
+3228a3634,3636
+3229a3638,3640
+3230a3642,3644
+3231a3646,3648
+3232a3650,3652
+3233a3654,3656
+3234a3658,3660
+3235a3662,3664
+3236a3666,3668
+3237a3670,3672
+3238a3674,3676
+3239a3678,3680
+3240a3682,3684
+3241a3686,3688
+3242a3690,3692
+3243a3694,3696
+3244a3698,3700
+3245a3702,3704
+3246a3706,3708
+3247a3710,3712
+3248a3714,3716
+3249a3718,3720
+3250a3722,3724
+3251a3726,3728
+3252a3730,3732
+3253a3734,3736
+3254a3738,3740
+3255a3742,3744
+3256a3746,3748
+3257a3750,3752
+3258a3754,3756
+3259a3758,3760
+3260a3762,3764
+3261a3766,3768
+3262a3770,3772
+3263a3774,3776
+3264a3778,3780
+3265a3782,3784
+3266a3786,3788
+3267a3790,3792
+3268a3794,3796
+3269a3798,3800
+3270a3802,3804
+3271a3806,3808
+3272a3810,3812
+3273a3814,3816
+3274a3818,3820
+3275a3822,3824
+3276a3826,3828
+3277a3830,3832
+3278a3834,3836
+3279a3838,3840
+3280a3842,3844
+3281a3846,3848
+3282a3850,3852
+3283a3854,3856
+3284a3858,3860
+3285a3862,3864
+3286a3866,3868
+3287a3870,3872
+3288a3874,3876
+3289a3878,3880
+3290a3882,3884
+3291a3886,3888
+3292a3890,3892
+3293a3894,3896
+3294a3898,3900
+3295a3902,3904
+3296a3906,3908
+3297a3910,3912
+3298a3914,3916
+3299a3918,3920
+3300a3922,3924
+3301a3926,3928
+3302a3930,3932
+3303a3934,3936
+3304a3938,3940
+3305a3942,3944
+3306a3946,3948
+3307a3950,3952
+3308a3954,3956
+3309a3958,3960
+3310a3962,3964
+3311a3966,3968
+3312a3970,3972
+3320,3338d3979
+< 
+3355a3997,4003
+> 
+3357a4006
+3411c4060
+---
+> CONFIG_PACKAGE_libopenssl-conf=y
+3412a4062,4063
+3423a4075
+3426c4078
+---
+3447c4099
+---
+3449,3453c4101,4127
+---
+> 
+3455a4130
+3458c4133
+---
+> CONFIG_PACKAGE_boost=y
+3461a4137,4190
+> 
+> 
+> CONFIG_boost-compile-visibility-hidden=y
+> CONFIG_boost-static-and-shared-libs=y
+> CONFIG_boost-runtime-shared=y
+> CONFIG_boost-variant-release=y
+> 
+> 
+> CONFIG_PACKAGE_boost-date_time=y
+> CONFIG_PACKAGE_boost-program_options=y
+> CONFIG_PACKAGE_boost-system=y
+3466a4196,4201
+3467a4203
+3469a4206
+3477c4214
+---
+3487a4225
+3488a4227
+3492a4232
+3496a4237
+3499d4239
+3505a4246
+3558a4300
+3566c4308
+---
+> CONFIG_PACKAGE_libev=y
+3574d4315
+3589a4331
+3591a4334
+3599d4341
+3601a4344
+3622a4366
+3627d4370
+3635d4377
+3637c4379
+---
+> CONFIG_PACKAGE_libltdl=y
+3643a4386
+3650c4393
+---
+> CONFIG_PACKAGE_libminiupnpc=y
+3660c4403,4404
+---
+> CONFIG_PACKAGE_libnatpmp=y
+3690d4433
+3711c4454
+---
+> CONFIG_PACKAGE_libpcre=y
+3720c4463,4464
+---
+3722a4467
+3728d4472
+3733a4478
+3744a4490
+3772c4518,4523
+---
+> CONFIG_PACKAGE_libsodium=y
+> 
+> CONFIG_LIBSODIUM_MINIMAL=y
+3777d4527
+3783d4532
+3797c4546
+---
+> CONFIG_PACKAGE_libuci-lua=y
+3808c4557
+---
+> CONFIG_PACKAGE_libusb-1.0=y
+3809a4559
+3814,3815c4564,4565
+---
+> CONFIG_PACKAGE_libuv=y
+3819a4570
+3821d4571
+3826a4577
+3833c4584
+---
+3834a4586
+3843d4594
+3848d4598
+3851c4601
+---
+3855d4604
+3858a4608
+3860,3861c4610,4611
+< CONFIG_PACKAGE_rpcd-mod-luci=y
+---
+> CONFIG_RE2_SHARED=y
+3864,3865d4613
+3900,3901d4647
+< CONFIG_LUCI_JSMIN=y
+< CONFIG_LUCI_CSSTIDY=y
+3906,3908d4651
+3915d4657
+3918d4659
+3923d4663
+3925c4665
+---
+3928c4668
+---
+3936,3937c4676,4677
+---
+> CONFIG_LUCI_LANG_zh-cn=y
+3941c4681,4682
+< CONFIG_PACKAGE_luci-mod-network=y
+---
+3943,3944d4683
+< CONFIG_PACKAGE_luci-mod-status=y
+< CONFIG_PACKAGE_luci-mod-system=y
+3949d4687
+3951a4690,4691
+3953a4694
+3954a4696
+3956c4698,4699
+---
+3961a4705,4707
+3964a4711,4713
+3966,3967d4714
+3969a4717,4720
+> CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
+> CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
+3970a4722
+3972a4725,4728
+3973a4730,4733
+> CONFIG_PACKAGE_luci-app-flowoffload=y
+3976a4737
+3980,3983c4741,4743
+---
+3984a4745
+3988,3989c4749,4751
+---
+3991a4754
+3993c4756
+---
+3998d4760
+4000c4762
+< CONFIG_PACKAGE_luci-app-opkg=y
+---
+4003a4766,4768
+4004a4770
+4007,4008c4773
+---
+4010,4011c4775
+---
+4016c4780,4781
+---
+4019a4785,4786
+4020a4788,4790
+4022d4791
+4024c4793
+---
+4026a4796,4798
+4028a4801,4804
+> CONFIG_PACKAGE_luci-app-vlmcsd=y
+4030,4031d4805
+4032a4807
+4033a4809
+4037c4813,4815
+---
+> CONFIG_PACKAGE_luci-app-zerotier=y
+4041a4820,4821
+4042a4823,4825
+4045d4827
+4052d4833
+4055,4056d4835
+4059d4837
+4063d4840
+4068a4846
+4073,4074d4850
+4077a4854
+4079,4082d4855
+< CONFIG_PACKAGE_luci-lib-nixio_notls=y
+4084,4086c4857,4866
+---
+> 
+> CONFIG_PACKAGE_default-settings=y
+4093d4872
+4096d4874
+4101d4878
+4114c4891
+---
+> CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
+4116,4118d4892
+4125d4898
+4128d4900
+4133d4904
+4146c4917
+---
+> CONFIG_PACKAGE_luci-i18n-firewall-zh-cn=y
+4148,4182c4919
+---
+> CONFIG_PACKAGE_luci-i18n-flowoffload-zh-cn=y
+4189d4925
+4192d4927
+4196,4197d4930
+4210c4943
+---
+> CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
+4212,4214c4945
+---
+> CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+4221d4951
+4224d4953
+4228,4229d4956
+4242c4969
+---
+> CONFIG_PACKAGE_luci-i18n-wol-zh-cn=y
+4243a4971
+> CONFIG_PACKAGE_luci-i18n-zerotier-zh-cn=y
+4257a4986
+4292a5022
+4294a5025
+4309d5039
+4312d5041
+4319a5049
+4330a5061
+4346d5076
+4355,4361d5084
+< 
+4366d5088
+4381a5104
+4383c5106
+---
+> CONFIG_PACKAGE_wget=y
+4410,4411c5133,5134
+< CONFIG_PACKAGE_ip6tables-extra=m
+< CONFIG_PACKAGE_ip6tables-mod-nat=m
+---
+4417,4419c5140,5142
+< CONFIG_PACKAGE_iptables-mod-checksum=m
+< CONFIG_PACKAGE_iptables-mod-cluster=m
+< CONFIG_PACKAGE_iptables-mod-clusterip=m
+---
+4421c5144
+< CONFIG_PACKAGE_iptables-mod-conntrack-extra=m
+---
+> CONFIG_PACKAGE_iptables-mod-conntrack-extra=y
+4425,4426c5148,5150
+< CONFIG_PACKAGE_iptables-mod-extra=m
+< CONFIG_PACKAGE_iptables-mod-filter=m
+---
+> CONFIG_PACKAGE_iptables-mod-fullconenat=y
+4429c5153
+< CONFIG_PACKAGE_iptables-mod-hashlimit=m
+---
+4432c5156
+< CONFIG_PACKAGE_iptables-mod-ipopt=m
+---
+> CONFIG_PACKAGE_iptables-mod-ipopt=y
+4434,4435c5158,5159
+< CONFIG_PACKAGE_iptables-mod-iprange=m
+< CONFIG_PACKAGE_iptables-mod-ipsec=m
+---
+4437c5161
+< CONFIG_PACKAGE_iptables-mod-led=m
+---
+4442,4446c5166,5169
+< CONFIG_PACKAGE_iptables-mod-nat-extra=m
+< CONFIG_PACKAGE_iptables-mod-nflog=m
+< CONFIG_PACKAGE_iptables-mod-nfqueue=m
+< CONFIG_PACKAGE_iptables-mod-physdev=m
+---
+> CONFIG_PACKAGE_iptables-mod-nat-extra=y
+4449,4450c5172
+< CONFIG_PACKAGE_iptables-mod-rpfilter=m
+---
+4453c5175
+< CONFIG_PACKAGE_iptables-mod-tee=m
+---
+4455,4457c5177,5179
+< CONFIG_PACKAGE_iptables-mod-trace=m
+< CONFIG_PACKAGE_iptables-mod-u32=m
+< CONFIG_PACKAGE_iptables-mod-ulog=m
+---
+4502d5223
+4505a5227
+4506a5229,5230
+4507a5232
+4540d5264
+4549,4553d5272
+4555d5273
+4564c5282
+---
+> CONFIG_PACKAGE_wsdd2=y
+4620d5337
+4624d5340
+4627d5342
+4636a5352,5357
+> 
+4649a5371
+4664a5387,5393
+> CONFIG_AMULE_CRYPTOPP_STATIC_LINKING=y
+> 
+4667c5396,5401
+---
+> CONFIG_PACKAGE_p910nd=y
+> 
+4676d5409
+4695d5427
+4791,4802d5522
+< 
+4807c5527
+---
+4812,4814d5531
+4840a5558
+4844c5562
+---
+4868c5586,5592
+---
+> CONFIG_PACKAGE_zerotier=y
+> 
+4883,4886c5607,5609
+< CONFIG_PACKAGE_comgt=m
+< CONFIG_PACKAGE_comgt-directip=m
+< CONFIG_PACKAGE_comgt-ncm=m
+< CONFIG_PACKAGE_uqmi=m
+---
+4892c5615
+< CONFIG_PACKAGE_cgi-io=y
+---
+4894c5617
+---
+4896c5619
+---
+> CONFIG_PACKAGE_frpc=y
+4901d5623
+4905d5626
+< CONFIG_NGINX_NOPCRE=y
+4910,4912c5631
+---
+4915c5634,5635
+---
+4917a5638
+4931c5652
+< CONFIG_PACKAGE_uhttpd-mod-ubus=y
+---
+4936a5658,5682
+> 
+> CONFIG_PACKAGE_rp-pppoe-common=y
+> 
+> 
+4940,4941d5685
+4950,4955d5693
+< 
+4957c5695
+---
+> CONFIG_PACKAGE_6in4=y
+4959a5698
+4962a5702
+4968a5709,5710
+4970c5712
+< CONFIG_PACKAGE_batctl-default=m
+---
+4975c5717
+---
+4977,4978c5719,5720
+< CONFIG_PACKAGE_chat=m
+---
+4985d5726
+4989c5730
+---
+4990a5732
+4996d5737
+4999d5739
+5015d5754
+5025a5765,5773
+5031a5780,5781
+5035a5786
+5037a5789,5790
+5064d5816
+5071d5822
+5078d5828
+5083d5832
+5085d5833
+5088a5837,5838
+5090a5841,5842
+5104d5855
+5124d5874
+5150d5899
+5151a5901,5904
+5153c5906,5908
+< CONFIG_PACKAGE_smartdns=m
+---
+5155d5909
+5167d5920
+5172a5926
+> CONFIG_PACKAGE_tcping=y
+5180a5935
+5182d5936
+5187c5941
+< CONFIG_PACKAGE_umbim=m
+---
+5189a5944
+5190a5946,5947
+> CONFIG_PACKAGE_vlmcsd=y
+5193d5949
+5199d5954
+5201,5202d5955
+< CONFIG_WPA_MSG_MIN_PRIORITY=3
+5204c5957
+< CONFIG_DRIVER_WEXT_SUPPORT=y
+---
+5216c5969
+< CONFIG_PACKAGE_wpad-basic=m
+---
+5223c5976
+< CONFIG_PACKAGE_wwan=m
+---
+5232d5984
+5235d5986
+5275d6025
+5282c6032
+< CONFIG_PACKAGE_uboot-envtools=m
+---
+5292d6041
+5294c6043
+---
+> CONFIG_PACKAGE_unzip=y
+5296,5298d6044
+5302,5313d6047
+< 
+5331a6066
+5369d6103
+5380,5381d6113
+5394c6126,6128
+---
+> CONFIG_PACKAGE_ntfs-3g=y
+> CONFIG_PACKAGE_NTFS-3G_HAS_PROBE=y
+5444a6179,6180
+5491c6227
+---
+5493,5498c6229,6236
+---
+5512d6249
+5518,5519d6254
+5522,5550d6256
+5557,5559c6263
+---
+> CONFIG_PACKAGE_coreutils-base64=y
+5561d6264
+5575d6277
+5609d6310
+5666d6366
+5721d6420
+5743d6441
+5746c6444
+< CONFIG_PACKAGE_iwinfo=m
+---
+> CONFIG_PACKAGE_iwinfo=y
+5751d6448
+5756a6454
+5758c6456,6458
+---
+5768a6469
+5785c6486
+< CONFIG_PACKAGE_nand-utils=m
+---
+5800c6501
+---
+> CONFIG_PACKAGE_openssl-util=y
+5815d6515
+5819,5820d6518
+5831,5832d6528
+5834a6531,6532
+> CONFIG_PACKAGE_shellsync=y
+5838d6535
+5844c6541
+< CONFIG_PACKAGE_spidev-test=m
+---
+5862d6558
+5874a6571
+5876c6573
+---
+> CONFIG_PACKAGE_usbutils=y
+5882d6578
+5887d6582
+5893a6589
+5900c6596
+---
+5903d6598
+< CONFIG_OVERRIDE_PKGS="fuse iputils libconfig xfsprogs"
