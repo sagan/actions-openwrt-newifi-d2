@@ -1,42 +1,22 @@
-# Actions-OpenWrt
+# [Actions-OpenWrt](https://github.com/P3TERX/Actions-OpenWrt) for newifi d2 (newifi 3)
 
-[![LICENSE](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square&label=LICENSE)](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE)
-![GitHub Stars](https://img.shields.io/github/stars/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Stars&logo=github)
-![GitHub Forks](https://img.shields.io/github/forks/P3TERX/Actions-OpenWrt.svg?style=flat-square&label=Forks&logo=github)
+源: [OpenWrt-19.07](https://github.com/openwrt/openwrt/tree/openwrt-19.07) (官方)
 
-Build OpenWrt using GitHub Actions
+在[OpenWrt 官方 19.07.3 mt7621 配置选项 .config](https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/config.buildinfo)基础上增加编译到固件里的内容：
 
-[Read the details in my blog (in Chinese) | 中文教程](https://p3terx.com/archives/build-openwrt-with-github-actions.html)
+* kmod-mt7603, kmod-mt76x2, wpad-basic, iwinfo 等无线相关。
+* ca-certificates, ca-bundle
+* dnsmasq-full (替代OP默认的 dnsmasq 包)
+* luci, luci-compat
+* luci-app-upnp, luci-app-wol
+* blockd, usbutils, kmod-usb2, kmod-usb2-pci, kmod-usb3, kmod-usb-storage (usb设备挂载及相关内核模块)
+* kmod-nls-iso8859-1, kmod-nls-cp932, kmod-nls-cp936, kmod-nls-cp950, kmod-nls-utf8 (kernel 的拉丁字符集, 日文, 简体中文, 繁体中文, utf8支持))
+* curl, gzip, ipset, ip-full, bash, coreutils-nohup
+* kmod-ipt-ipset, kmod-ipt-nat6, kmod-ipt-tproxy, kmod-tcp-bbr, kmod-tun, kmod-wireguard, iptables-mod-tproxy, ip6tables-mod-nat (网络相关内核模块)
+* kmod-fs-ext4, kmod-fuse
+* 其它启用的选项：CONFIG_KERNEL_FS_POSIX_ACL, CONFIG_KERNEL_USER_NS
 
-## Usage
+打包进固件里的基准是可以直接装 luci-app-openclash 和 smartdns 。
 
-- Click the [Use this template](https://github.com/P3TERX/Actions-OpenWrt/generate) button to create a new repository.
-- Generate `.config` files using [Lean's OpenWrt](https://github.com/coolsnowwolf/lede) source code. ( You can change it through environment variables in the workflow file. )
-- Push `.config` file to the GitHub repository, and the build starts automatically.Progress can be viewed on the Actions page.
-- When the build is complete, click the `Artifacts` button in the upper right corner of the Actions page to download the binaries.
+测试 fuse 可用（rclone mount)。
 
-### Tips
-
-It may take a long time to create a `.config` file and build the OpenWrt firmware. Thus, before create repository to build your own firmware, you may check out if others have already built it which meet your needs by simply [search `Actions-Openwrt` in GitHub](https://github.com/search?q=Actions-openwrt).
-
-Add some meta info of your built firmware (such as firmware architecture and installed packages) to your repository introduction, this will save others' time.
-
-## Acknowledgments
-
-- [Microsoft](https://www.microsoft.com)
-- [Microsoft Azure](https://azure.microsoft.com)
-- [GitHub](https://github.com)
-- [GitHub Actions](https://github.com/features/actions)
-- [tmate](https://github.com/tmate-io/tmate)
-- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
-- [csexton/debugger-action](https://github.com/csexton/debugger-action)
-- [Cisco](https://www.cisco.com/)
-- [OpenWrt](https://github.com/openwrt/openwrt)
-- [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
-- [Cowtransfer](https://cowtransfer.com)
-- [WeTransfer](https://wetransfer.com/)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
-
-## License
-
-[MIT](https://github.com/P3TERX/Actions-OpenWrt/blob/master/LICENSE) © P3TERX
