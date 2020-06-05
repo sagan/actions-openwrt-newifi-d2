@@ -5,10 +5,7 @@
 在[OpenWrt 官方 19.07.3 mt7621 配置选项 .config](https://downloads.openwrt.org/releases/19.07.3/targets/ramips/mt7621/config.buildinfo)基础上增加编译到固件里的内容：
 
 * kmod-mt7603, kmod-mt76x2, wpad-basic, iwinfo 等无线相关。
-* ca-certificates, ca-bundle
-* dnsmasq-full (替代OP默认的 dnsmasq 包)
-* luci, luci-compat
-* luci-app-upnp, luci-app-wol
+* ca-certificates, ca-bundle, luci-compat, luci-app-upnp, luci-app-wol, dnsmasq-full (替代OP默认的 dnsmasq 包)
 * blockd, usbutils, kmod-usb2, kmod-usb2-pci, kmod-usb3, kmod-usb-storage (usb设备挂载及相关内核模块)
 * kmod-nls-iso8859-1, kmod-nls-cp932, kmod-nls-cp936, kmod-nls-cp950, kmod-nls-utf8 (kernel 的拉丁字符集, 日文, 简体中文, 繁体中文, utf8支持))
 * curl, unzip, ipset, ip-full, bash, coreutils-nohup
