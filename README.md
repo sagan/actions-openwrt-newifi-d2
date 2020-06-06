@@ -6,11 +6,11 @@
 
 * kmod-mt7603, kmod-mt76x2, wpad-basic, iwinfo 等无线相关。
 * ca-certificates, ca-bundle, luci-compat, luci-app-upnp, luci-app-wol, dnsmasq-full (替代OP默认的 dnsmasq 包)
-* blockd, usbutils, kmod-usb2, kmod-usb2-pci, kmod-usb3, kmod-usb-storage (usb设备挂载及相关内核模块)
+* blockd, usbutils, kmod-usb2, kmod-usb2-pci, kmod-usb3, kmod-usb-storage, kmod-usb-storage-uas (usb设备挂载及相关内核模块)
 * kmod-nls-iso8859-1, kmod-nls-cp932, kmod-nls-cp936, kmod-nls-cp950, kmod-nls-utf8 (kernel 的拉丁字符集, 日文, 简体中文, 繁体中文, utf8支持))
 * curl, unzip, ipset, ip-full, bash, coreutils-nohup
 * kmod-ipt-ipset, kmod-ipt-nat6, kmod-ipt-tproxy, kmod-tcp-bbr, kmod-tun, kmod-wireguard, iptables-mod-tproxy, ip6tables-mod-nat (网络相关内核模块)
-* kmod-fs-ext4, kmod-fuse
+* kmod-fs-ext4, kmod-fs-exfat, kmod-fs-f2fs, kmod-fs-ntfs, kmod-fuse, ntfs-3g
 * 其它启用的选项：CONFIG_KERNEL_FS_POSIX_ACL, CONFIG_KERNEL_USER_NS
 
 打包进固件里的基准是可以直接装 luci-app-openclash 和 smartdns 。
